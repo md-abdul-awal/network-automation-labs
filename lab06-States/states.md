@@ -920,6 +920,12 @@ Total states run:     2
 Total run time:   1.361 s
 </pre>
 
+Because the backup is saved in the minion, we won't find it in master. To read that, use the following command:
+
+```bash
+salt router1 file.read /srv/salt/bkups/router1.conf
+```
+
 ## Part-3: Generating ACL configuration using Capirca
 
 [`Capirca`](https://github.com/google/capirca) is an open-source Python library and tool, which generates ACL configuration based on abstracted data (i.e., the input data is non vendor-specific).
